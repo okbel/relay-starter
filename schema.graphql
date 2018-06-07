@@ -1,0 +1,16 @@
+type User {
+  id: ID
+  firstName: String
+  lastName: String
+  username: String
+  website: String
+  country: String
+}
+
+type RootQuery {
+  me: User
+}
+
+schema {
+  query: RootQuery
+}
