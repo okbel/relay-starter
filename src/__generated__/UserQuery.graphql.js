@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash b2efc68c02620c3f0fec056ee6d7a7c4
+ * @relayHash f891fe9fe7d63d4ab255a0c9b7b5ac3d
  */
 
 /* eslint-disable */
@@ -15,6 +15,9 @@ export type UserQueryResponse = {|
     +id: ?string,
     +firstName: ?string,
     +lastName: ?string,
+    +username: ?string,
+    +website: ?string,
+    +country: ?string,
   |}
 |};
 */
@@ -26,6 +29,9 @@ query UserQuery {
     id
     firstName
     lastName
+    username
+    website
+    country
   }
 }
 */
@@ -61,6 +67,27 @@ var v0 = [
         "name": "lastName",
         "args": null,
         "storageKey": null
+      },
+      {
+        "kind": "ScalarField",
+        "alias": null,
+        "name": "username",
+        "args": null,
+        "storageKey": null
+      },
+      {
+        "kind": "ScalarField",
+        "alias": null,
+        "name": "website",
+        "args": null,
+        "storageKey": null
+      },
+      {
+        "kind": "ScalarField",
+        "alias": null,
+        "name": "country",
+        "args": null,
+        "storageKey": null
       }
     ]
   }
@@ -70,7 +97,7 @@ return {
   "operationKind": "query",
   "name": "UserQuery",
   "id": null,
-  "text": "query UserQuery {\n  me {\n    id\n    firstName\n    lastName\n  }\n}\n",
+  "text": "query UserQuery {\n  me {\n    id\n    firstName\n    lastName\n    username\n    website\n    country\n  }\n}\n",
   "metadata": {},
   "fragment": {
     "kind": "Fragment",
@@ -89,5 +116,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '6e36ccf24e212042cf5569d53636baf1';
+(node/*: any*/).hash = 'fa2f7c85b1cba143140f00d1ce505a98';
 module.exports = node;
